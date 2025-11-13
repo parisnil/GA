@@ -4,37 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Populära kläder</title>
-    <link rel ="stylesheet" href="hem1.css">
-
+    <link rel="stylesheet" href="hem1.css" />
   </head>
   <body>
+    <header>
+      <div class="logo">H&P</div>
+      <button class="meny_knapp" id="meny_knapp">☰</button>
+    </header>
+
     <div class="main_container">
       <main>
         <h1 class="titel">Populära produkter</h1>
         <div class="produkter">
-        <!-- Produkt 1 -->
-        <div class="produkt">
-          <div class="produkt_bild"><img /></div>
-          <div class="produkt_info">
+          <div class="produkt">
+            <img class="produkt_bild" />
+            <div class="produkt_info"></div>
           </div>
-        </div>
 
-        <div class="produkt">
-          <div class="produkt_bild"><img /></div>
-          <div class="produkt_info">
+          <div class="produkt">
+            <img class="produkt_bild" />
+            <div class="produkt_info"></div>
           </div>
-        </div>
 
-        <div class="produkt">
-          <div class="produkt_bild"><img /></div>
-          <div class="produkt_info">
+          <div class="produkt">
+            <img class="produkt_bild" />
+            <div class="produkt_info"></div>
           </div>
         </div>
       </main>
-
     </div>
 
-    <footer><p>2026 H&P Klädbutik.</p></footer>
+    <div class="meny" id="meny">
+      <div class="meny_header">
+        <div class="meny_titel">Meny</div>
+        <button class="close_meny" id="close_meny">×</button>
+      </div>
+      <div class="meny_links">
+        <a href="hem1.html" class="meny_link"> Startsidan </a>
+        <a href="kvinnor.html" class="meny_link"> Kvinnor </a>
+        <a href="man.html" class="meny_link"> Man </a>
+        <a href="barn.html" class="meny_link"> Barn </a>
+        <a href="popular.html" class="meny_link"> Populära</a>
+        <a href="kontakt.html" class="meny_link"> Kontakt </a>
+      </div>
+    </div>
+
+    <div class="meny_over" id="meny_over"></div>
 
     <script src="hem1.js"></script>
   </body>

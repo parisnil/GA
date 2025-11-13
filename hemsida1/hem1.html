@@ -4,80 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Första hemsida</title>
-    <link rel ="stylesheet" href="hem1.css">
+    <link rel="stylesheet" href="hem1.css" />
   </head>
   <body>
     <header>
       <div class="logo">H<span>&</span>P</div>
-      <button class="menu_knapp">☰</button>
+      <button class="meny_knapp" id="meny_knapp">☰</button>
     </header>
-    <main>
-      <section>
-        <h1>Välkommen till H&P Klädbutik</h1>
-        <p>
-          Upptäck vårt senaste kollektion av högkvalitativa kläder för alla
-          tillfällen
-        </p>
-      </section>
+    <div class="main_container">
+      <main class="main_content">
+        <section class="hero">
+          <h1>Välkommen till H&P Klädbutik</h1>
+          <p>
+            Upptäck vårt senaste kollektion av högkvalitativa kläder för alla
+            tillfällen
+          </p>
+        </section>
 
-      <h2>Utvalda produkter</h2>
-      <div class="produkter">
-        <!-- Produkt 1 -->
-        <div class="produkt">
-          <div class="produkt_bild"><img /></div>
-          <div class="produkt_info">
-            <h3>T-shirt</h3>
-            <p>299 kr</p>
+        <h2>Utvalda produkter</h2>
+        <div class="produkter">
+          <!-- Produkt 1 -->
+          <div class="produkt">
+            <img class="produkt_bild" src="bilder/top1.jpg" alt="Top" loading="lazy">
+            <div class="produkt_info">
+              <h3>Gul Randig Top</h3>
+              <p>299 kr</p>
+            </div>
+          </div>
+
+          <!-- Produkt 2 -->
+          <div class="produkt">
+            <img class="produkt_bild" src="bilder/byxa5.jpg" alt="Byxa" loading="lazy">
+            <div class="produkt_info">
+              <h3>Blå Tight Jeans</h3>
+              <p>499 kr</p>
+            </div>
+          </div>
+
+          <!-- Produkt 3 -->
+          <div class="produkt">
+            <img class="produkt_bild" src="bilder/byxa4.jpg" alt="Byxa" loading="lazy"/>
+            <div class="produkt_info">
+              <h3>Mörk Blå Jeans</h3>
+              <p>399 kr</p>
+            </div>
+          </div>
+
+          <!-- Produkt 4 -->
+          <div class="produkt">
+            <img class="produkt_bild" src="bilder/tröja1.jpg" alt="Tröja" loading="lazy">
+            <div class="produkt_info">
+              <h3>Grå Stickad Tröja</h3>
+              <p>599 kr</p>
+            </div>
           </div>
         </div>
-        <!-- Produkt 2 -->
-
-        <div class="produkt">
-          <div class="produkt_bild"><img /></div>
-          <div class="produkt_info">
-            <h3>Jeans</h3>
-            <p>499 kr</p>
-          </div>
-        </div>
-
-        <!-- Produkt 3 -->
-
-        <div class="produkt">
-          <div class="produkt_bild"><img /></div>
-          <div class="produkt_info">
-            <h3>Hoodie</h3>
-            <p>399 kr</p>
-          </div>
-        </div>
-
-        <!-- Produkt 4 -->
-
-        <div class="produkt">
-          <div class="produkt_bild"><img /></div>
-          <div class="produkt_info">
-            <h3>Sommarklänning</h3>
-            <p>499 kr</p>
-          </div>
-        </div>
-      </div>
-    </main>
+      </main>
+    </div>
 
     <footer><p>2026 H&P Klädbutik.</p></footer>
 
-    <div class="menu">
-      <div class="menu_header">
-        <div>Meny</div>
-        <button class="close">×</button>
+    <div class="meny" id="meny">
+      <div class="meny_header">
+        <div class="meny_titel">Meny</div>
+        <button class="close_meny" id="close_meny">×</button>
       </div>
-      <div class="menu_links">
-        <a href="kvinnor.html"> Kvinnor </a>
-        <a href="man.html"> Man </a>
-        <a href="barn.html"> Barn </a>
-        <a href="popular.html"> Populära</a>
-        <a href="kontakt.html"> Kontakt </a>
+      <div class="meny_links">
+        <a href="hem1.html" class="meny_link"> Startsidan </a>
+        <a href="kvinnor.html" class="meny_link"> Kvinnor </a>
+        <a href="man.html" class="meny_link"> Man </a>
+        <a href="barn.html" class="meny_link"> Barn </a>
+        <a href="popular.html" class="meny_link"> Populära</a>
+        <a href="kontakt.html" class="meny_link"> Kontakt </a>
       </div>
     </div>
-    <script src="hem1.js"></script>
 
+    <div class="meny_over" id="meny_over"></div>
+
+    <script src="hem1.js"></script>
   </body>
 </html>

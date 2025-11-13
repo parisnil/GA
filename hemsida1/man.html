@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Herrkläder</title>
-    <link rel ="stylesheet" href="hem1.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="hem1.css" />
+  </head>
+  <body>
     <header>
-      <div class="logo">H<span>&</span>P</div>
-      <button class="menu_knapp">☰</button>
+      <div class="logo">H&P</div>
+      <button class="meny_knapp" id="meny_knapp">☰</button>
     </header>
 
-    <div class="menu">
-      <div class="menu_header">
-        <div>Meny</div>
-        <button class="close">×</button>
+    <div class="main_container">
+      <main class="main_content full_width">
+        <h1 class="titel">Män</h1>
+
+        <div>
+          <button>Alla</button>
+          <button>Skjortor</button>
+          <button>Byxor</button>
+          <button>Jackor</button>
+          <button>Skor</button>
+        </div>
+
+        <div class="produkter">
+          <div class="produkt">
+            <img class="produkt_bild">
+            <div class="produkt_info"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="meny" id="meny">
+      <div class="meny_header">
+        <div class="meny_titel">Meny</div>
+        <button class="close_meny" id="close_meny">×</button>
       </div>
-      <div class="menu_links">
-        <a href="kvinnor.html"> Kvinnor </a>
-        <a href="man.html"> Man </a>
-        <a href="barn.html"> Barn </a>
-        <a href="popular.html"> Populära</a>
-        <a href="kontakt.html"> Kontakt </a>
+      <div class="meny_links">
+        <a href="hem1.html" class="meny_link"> Startsidan </a>
+        <a href="kvinnor.html" class="meny_link"> Kvinnor </a>
+        <a href="man.html" class="meny_link"> Man </a>
+        <a href="barn.html" class="meny_link"> Barn </a>
+        <a href="popular.html" class="meny_link"> Populära</a>
+        <a href="kontakt.html" class="meny_link"> Kontakt </a>
       </div>
     </div>
-    
-</body>
+
+    <div class="meny_over" id="meny_over"></div>
+
+    <script src="hem1.js"></script>
+  </body>
 </html>
