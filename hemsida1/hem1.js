@@ -22,7 +22,32 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const currentPage = window.location.pathname.split("/").pop();
-
-  // Hämta alla navigationslänkar
   const navLinks = document.querySelectorAll(".menu_link");
+
+  navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.style.color = '#e74c3c';
+            link.style.fontWeight = 'bold';
+        }
+    });
+
+  const kontakt = document.getElementById("kontakt");
+  if (kontakt) {
+    kontakt.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(kontakt);
+      const name = formData.get("name");
+      const email = formData.get("email");
+      const message = formData.get("message");
+
+      if (!name || !email || !message) {
+        alert("Vänligen fyll i alla fält.");
+        return;
+      }
+
+      alert("Tack för ditt meddelande! Vi återkommer så snart som möjligt.");
+      kontakt.reset();
+    });
+  }
 });
