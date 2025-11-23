@@ -24,12 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const currentPage = window.location.pathname.split("/").pop();
   const navLinks = document.querySelectorAll(".menu_link");
 
-  navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-            link.style.color = '#e74c3c';
-            link.style.fontWeight = 'bold';
-        }
-    });
+  navLinks.forEach((link) => {
+    if (link.getAttribute("href") === currentPage) {
+      link.style.color = "#e74c3c";
+      link.style.fontWeight = "bold";
+    }
+  });
 
   const kontakt = document.getElementById("kontakt");
   if (kontakt) {
