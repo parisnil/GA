@@ -21,16 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  const currentPage = window.location.pathname.split("/").pop();
-  const navLinks = document.querySelectorAll(".menu_link");
-
-  navLinks.forEach((link) => {
-    if (link.getAttribute("href") === currentPage) {
-      link.style.color = "#e74c3c";
-      link.style.fontWeight = "bold";
-    }
-  });
-
   const kontakt = document.getElementById("kontakt");
   if (kontakt) {
     kontakt.addEventListener("submit", function (e) {
@@ -48,6 +38,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
       alert("Tack för ditt meddelande! Vi återkommer så snart som möjligt.");
       kontakt.reset();
+    });
+  }
+
+  const filterButtons = document.querySelectorAll(".filter_botton");
+  if (filterButtons.length > 0) {
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+        this.classList.add("active");
+
+        const filter = this.getAttribute("data_filter");
+
+        const products = document.querySelectorAll(".produkt");
+
+        products.forEach((product) => {
+          if (
+            filter === "allt" ||
+            product.getAttribute("data_kategori") === filter
+          ) {
+            product.style.display = "block";
+          } else {
+            product.style.display = "none";
+          }
+        });
+      });
     });
   }
 });

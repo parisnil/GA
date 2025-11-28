@@ -262,3 +262,10 @@ header {
     background-color: #1a252f;
 }
 
+footer {
+    background-color: #393939;
+    color: white;
+    padding: 1rem;
+    margin-top: 3rem;
+    text-align: center;
+}
