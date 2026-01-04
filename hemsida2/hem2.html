@@ -4,40 +4,145 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Andra hemsida</title>
+    <link rel="stylesheet" href="hem2.css" />
   </head>
   <body>
-    <header>
-      <div class="logo">H&P</div>
-      <nav>
-        <a href="hem2.html"> Startsidan </a>
-        <a href="kvinnor.html">Kvinnor</a>
-        <a href="man.html"> Män </a>
-        <a href="barn.html"> Barn </a>
-        <a href="popular.html"> Populära </a>
-        <a href="kontakt.html"> Kontakt </a>
-      </nav>
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">H&P</div>
+
+        <nav class="links">
+          <a href="hem2.html" class="link active"> Startsida </a>
+          <a href="kvinnor.html" class="link"> Kvinnor </a>
+          <a href="man.html" class="link"> Man </a>
+          <a href="barn.html" class="link"> Barn </a>
+          <a href="popular.html" class="link"> Populära </a>
+          <a href="kontakt.html" class="link"> Kontakt </a>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <section>
-        <video width="600" controls autoplay loop muted>
-          <source src="video/klädvideo1.mp4" type="video" />
-        </video>
+    <main class="main_content">
+      <section class="video_section">
+        <div class="video_container">
+          <video loop muted playsinline>
+            <source src="videos/klädvideo1.mp4" type="video/mp4" />
+          </video>
+          <div class="video_overlay">
+            <h3>Sommarkollektionen 2024</h3>
+            <p>Upptäck de senaste trenderna</p>
+          </div>
+        </div>
+
+        <div class="text_content">
+          <h2>Välkommen till H&P Modebutik</h2>
+          <p>
+            Vi är en ledande klädbutik som kombinerar kvalitet med stil. Vårt
+            mål är att erbjuda kläder som inte bara ser bra ut, utan också känns
+            bra att bära. Med över 20 års erfarenhet i branschen har vi byggt
+            upp ett rykte för excellens och kundnöjdhet.
+          </p>
+          <p>
+            Vi arbetar endast med de bästa materialen och leverantörerna för att
+            säkerställa att varje plagg håller högsta kvalitet. Vårt team av
+            designers arbetar ständigt med att skapa nya och spännande
+            kollektioner som följer de senaste trenderna.
+          </p>
+        </div>
       </section>
 
-      <section>
-        <p>
-          Välkommen till H&P Klädbutik! <br />
-          Upptäck vårt senaste kollektion av högkvalitativa kläder för alla
-          tillfällen.
-        </p>
+      <section class="video_section">
+        <div class="video_container">
+          <video loop muted playsinline>
+            <source src="videos/klädvideo2.mp4" type="video/mp4" />
+          </video>
+          <div class="video_overlay">
+            <h3>Designer Collection</h3>
+            <p>Exklusiva plagg från världsledande designers</p>
+          </div>
+        </div>
+
+        <div class="text_content">
+          <h2>Vår filosofi</h2>
+          <p>
+            På H&P tror vi på hållbart mode. Vi strävar efter att minska vår
+            miljöpåverkan genom att välja miljövänliga material och etiska
+            produktionsmetoder. Varje plagg i vår butik är noggrant utvalt för
+            att inte bara se bra ut, utan också vara bra för planeten.
+          </p>
+          <p>
+            Vi samarbetar med lokala designers och hantverkare för att stödja
+            den lokala ekonomin och säkerställa unika produkter som du inte
+            hittar någon annanstans. Vårt engagemang för kvalitet och hållbarhet
+            är kärnan i allt vi gör.
+          </p>
+        </div>
       </section>
 
-      <section>
-        
+      <section class="video_section">
+        <div class="video_container">
+          <video loop muted playsinline>
+            <source src="videos/klädvideo3.mp4" type="video/mp4" />
+          </video>
+          <div class="video_overlay">
+            <h3>Sustainable Fashion</h3>
+            <p>Kläder med omtanke om miljön</p>
+          </div>
+        </div>
+
+        <div class="text_content">
+          <h2>Vårt utbud</h2>
+          <p>
+            Vi erbjuder ett brett utbud av kläder för hela familjen. Från casual
+            vardagskläder till eleganta festkläder har vi något för varje
+            tillfälle. Våra kollektioner uppdateras regelbundet för att alltid
+            erbjuda det senaste inom mode.
+          </p>
+          <p>
+            Besök vår butik eller shoppa online för att upptäcka dina nya
+            favoritplagg. Vår kundservice-team är alltid redo att hjälpa dig med
+            råd och tips för att hitta den perfekta stilen.
+          </p>
+        </div>
       </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer_content">
+        <div class="footer_section">
+          <h3>Om oss</h3>
+          <p>
+            H&P är en ledande klädbutik med fokus på kvalitet, stil och
+            hållbarhet. Vi har funnits sedan 2004 och levererar kläder för hela
+            familjen.
+          </p>
+        </div>
+
+        <div class="footer_section">
+          <h3>Kontakt</h3>
+          <p>
+            Klädgatan 67<br />
+            123 45 Stockholm<br />
+            Telefon: 08-123 45 67<br />
+            Email: info@hp.se
+          </p>
+        </div>
+
+        <div class="footer_section">
+          <h3>Öppettider</h3>
+          <p>
+            Mån-Fre: 10-18<br />
+            Lördag: 10-19<br />
+            Söndag: 11-20
+          </p>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <p>2026 H&P Klädbutik</p>
+      </div>
+    </footer>
+
+    <script src="hem2.js"></script>
   </body>
 </html>
