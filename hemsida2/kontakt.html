@@ -22,6 +22,50 @@
       </div>
     </header>
 
+    <main class="main_content">
+      <section class="kontakt">
+        <h1 class="titel">Kontakta oss</h1>
+
+        <div class="kontakt_ruta">
+          <form id="kontakt_form">
+            <div class="form_grupp">
+              <label for="name">Namn</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form_grupp">
+              <label for="email">E-post</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form_grupp">
+              <label for="subject">Ämne</label>
+              <select id="subject" name="subject" required>
+                <option value="">Välj ämne</option>
+                <option value="order">Orderfråga</option>
+                <option value="return">Retur</option>
+                <option value="product">Produktfråga</option>
+                <option value="delivery">Leverans</option>
+                <option value="other">Övrigt</option>
+              </select>
+            </div>
+
+            <div class="form_grupp">
+              <label for="message">Meddelande</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit">Skicka meddelande</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
     <footer class="footer">
       <div class="footer_content">
         <div class="footer_section">
