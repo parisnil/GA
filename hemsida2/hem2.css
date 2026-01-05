@@ -1,5 +1,198 @@
+:root {
+  --bakgrund: #121212;
+  --bakgrund2: #1e1e1e;
+
+  --text: #ffffff;
+  --text2: #b0b0b0;
+
+  --lila: #9c27b0;
+  --rosa: #ff4081;
+
+  --header: #1e1e1e;
+  --shadow: #0000004d;
+  --border_radius: 8px;
+  --footer: #0d0d0d;
+
+  --transition: all 0.3s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bakgrund);
+  color: var(--text);
+  line-height: 1.6;
+  transition: var(--transition);
+  min-height: 100vh;
+}
+
+.header {
+  background-color: var(--header);
+  box-shadow: 0 2px 15px var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.header_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--lila);
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0 auto;
+}
+
+.link {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border_radius);
+  transition: var(--transition);
+  position: relative;
+}
+
+.link:hover,
+.link.active {
+  color: var(--lila);
+  background-color: #9c27b01a;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--lila);
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+.link:hover::after,
+.link.active::after {
+  width: 80%;
+}
+
+.main_content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.video_section {
+  margin-bottom: 4rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.video_container {
+  width: 100%;
+  height: 500px;
+  border-radius: var(--border_radius);
+  overflow: hidden;
+  box-shadow: 0 10px 30px var(--shadow);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.video_container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video_text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(transparent, #000000b3);
+  color: white;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.video_container:hover .video_text {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.text {
+  background-color: var(--bakgrund2);
+  padding: 2rem;
+  border-radius: var(--border_radius);
+  box-shadow: 0 5px 15px var(--shadow);
+  border-left: 4px solid var(--lila);
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.text h2 {
+  color: var(--lila);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.text p {
+  color: var(--text2);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.footer {
+  background-color: var(--footer);
+  color: white;
+  padding: 3rem 0;
+  margin-top: 4rem;
+}
+
+.footer_content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 2rem;
+}
+
+.footer_section h3 {
+  margin-bottom: 1rem;
+  color: var(--rosa);
+}
+
+.footer_section p {
+  opacity: 0.8;
+  line-height: 1.8;
+}
+
+.bottom {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid #ffffff1a;
+  opacity: 0.7;
 }
