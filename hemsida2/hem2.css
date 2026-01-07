@@ -163,6 +163,87 @@ body {
   line-height: 1.8;
 }
 
+.produkt_section {
+  margin: 4rem 0;
+}
+
+.titel {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--lila);
+  font-size: 2.2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.titel::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: var(--rosa);
+}
+
+.produkter {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.produkt {
+  background-color: var(--bakgrund2);
+  border-radius: var(--border_radius);
+  overflow: hidden;
+  box-shadow: 0 5px 15px var(--shadow);
+  transition: var(--transition);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.produkt:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px var(--shadow);
+}
+
+.produkt_bild {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.produkt:hover .produkt_bild {
+  transform: scale(1.05);
+}
+
+.produkt_info {
+  padding: 1.5rem;
+}
+
+.produkt_titel {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.produkt_pris {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--lila);
+  margin-bottom: 0.5rem;
+}
+
+.produkt_kategori {
+  font-size: 0.9rem;
+  color: var(--text2);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+
+
 .kontakt {
   max-width: 600px;
   margin: 0 auto;
@@ -205,7 +286,7 @@ body {
 .form_grupp textarea:focus {
   outline: none;
   border-color: var(--lila);
-  box-shadow: 0 0 0 3px #9c27b033;
+  box-shadow: 0 0 0 3px #9b27b033;
 }
 
 .submit {
