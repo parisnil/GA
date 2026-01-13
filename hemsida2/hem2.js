@@ -26,12 +26,27 @@ document.addEventListener("DOMContentLoaded", function () {
     videoObserver.observe(container);
   });
 
+  const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+  if ("IntersectionObserver" in window) {
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src || img.src;
+          img.classList.remove("lazy");
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    lazyImages.forEach((img) => imageObserver.observe(img));
+  }
+
   document.body.style.opacity = "0";
   document.body.style.transition = "opacity 0.5s ease-in";
 
   setTimeout(() => {
     document.body.style.opacity = "1";
   }, 100);
-
-  
 });
